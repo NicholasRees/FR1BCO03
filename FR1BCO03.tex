@@ -154,8 +154,6 @@ There are currently no significant changes to either performance or scope.
 \subsection{Software status}
 A project of the SKA scale posed a unique set of political challenges and we were required to spread software development over 8 countries (Australia, China, India, Italy, South Africa, Switzerland, The Netherlands and the United Kingdom) with strict monetary allocations and around 150 contracted developers. Also, in order to allow for ongoing change and optimisation, we had adopted the Scaled Agile Framework\footnote{\url{https://www.scaledagileframework.com}} as the basis for our development processes. In order to avoid contractual silo's impacting the development process we decided to adopt hightly relational contract structure based on the Vested\footnote{\url{https://www.vestedway.com}} approach. This foregoes the tradititional tightly defined contract specification in the belief that this is counterproductive if the work has a large number of unknowns, and instead replaces it with a vision, strategic objectives, guiding principles and expected behaviours, which force the development teams to work closely together with a goal of system level optimisation.
 
-
-
 \section{Challenges}
 \subsection{Scaling}
 The number 1 challenge of the SKA is scaling. This is a multidimensional challenge, encompassing:
@@ -169,14 +167,16 @@ Each of this brings their own challenges.
 
 \subsection{Tracking progress towards long term milestones}
 \subsection{Continuously working product}
-A cornerstone of anhy agile development is a continuous integration system that ensures that a continuously  working and tested set of products is always available. In a single large system, this is extremely difficult to guarantee, particularly without the focussing drive of stakeholders who are using the system everyday.
+A cornerstone of any agile development is a continuous integration system that ensures that a continuously  working and tested set of products is always available. In a single large system, this is extremely difficult to guarantee, particularly without the focussing drive of stakeholders who are using the system everyday.
 
 \subsection{Software vs System Engineering}
-The SKAO has a strong System Engineering culture. In his excellent paper Maier highlights a fundamental conflict between traditional System Engineering and Software Engineering - System Engineering is based on an assumption that the decomposition of products has a heirarchical structure with each sub-product having an ``{\em is-part-of}'' relationship with a parent product. This simplifies the concept of the system Engineering V model of decompositional design and verification. Maier points out that software product relationships are usually {\em is-used-by}, not {\em is-part-of}, which can either generate a flat structure of (ideally independent) services or a layered structure of modules. Since these don't adhere to the system engineering heirarchy, important software products that are used by many parts of the system often aren't recognised in the Product Breakdown structure used for System verification.
+The SKAO has a strong System Engineering culture. In his excellent paper Maier~\cite{Maier2006} highlights a fundamental conflict between traditional System Engineering and Software Engineering - System Engineering is based on an assumption that the decomposition of products has a heirarchical structure with each sub-product having an ``{\em is-part-of}'' relationship with a parent product. This simplifies the concept of the system Engineering V model of decompositional design and verification. Maier points out that software product relationships are usually {\em is-used-by}, not {\em is-part-of}, which can either generate a flat structure of (ideally independent) services or a layered structure of modules. Since these don't adhere to the system engineering heirarchy, important software products that are used by many parts of the system often aren't recognised in the Product Breakdown structure used for System verification.
 
 \subsection{Sub-system ownership vs Global optimisation}
 \subsection{Coupling and Conways Law}
 \subsection{Architectural Evolution}
+In any large system, architectural evolution is difficult. Because of the extended, siloed, pre-construction phase where no system level code development was done, it meant that many of the design aspects were immature. The primary interface behaviours were untested, but conversely the description was very wide. This is contrary to the Agile ideal which would see a Minimum Viable Product built that was still representative of aspects of the full system. 
+
 \subsection{Interaction with other contracts}
 
 \section{SOFTWARE ARCHITECTURE}
