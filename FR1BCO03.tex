@@ -49,6 +49,10 @@
 
 \usepackage[USenglish]{babel}
 
+%%\usepackage{draftwatermark}
+%%\SetWatermarkText{Draft}
+%%\SetWatermarkScale{5}
+
 %
 % if BibLaTeX is used
 %
@@ -76,58 +80,34 @@ The SKA Project is a science mega-project whose mission is to build the world's 
 \end{abstract}
 
 \section{INTRODUCTION}
-This is the third in a series of SKA status papers presented at ICALEPCS meetings and should be read in conjunction with the other two to understand the evolution of the SKA. At the time of the 2021 paper formal construction had just commenced in July of that year, and we were in the process of issuing the first round of contracts. This paper covers the evolution since this time, but it starts with a brief historical overview to establish context.
+This is the third in a series of SKA status papers presented at ICALEPCS meetings and should be read in conjunction with the other two to understand the evolution of the SKA. At the time of the 2021 paper formal construction had just commenced, and we were in the process of issuing the first contracts. This paper covers the evolution since this time, but it starts with a brief historical overview to establish context.
 
 \section{HISTORY}
-Although SKAO was officially created as an international observatory on 15 January 2021, the concept dates back to the early 1990's when astronomers proposed the idea of tracing the history of the Universe by mapping its most abundant element: Hydrogen (see, for example, Wilkinson~\cite{1991ASPC...19..428W}). Specifically, they proposed to observe the H1 emission line from it's rest frequency of 1420 MHz to red-shifts of more than 10, thereby observing it from the present day to just after the beginning of the universe.
+While the SKAO was officially created as an international observatory on 15 January 2021, the concept dates back to the early 1990's when astronomers proposed the idea of tracing the history of the Universe by mapping its most abundant element: Hydrogen (see, for example, Wilkinson~\cite{1991ASPC...19..428W}). Specifically, they proposed to observe the H1 emission line from it's rest frequency of 1420 MHz to red-shifts of more than 10, thereby observing it from just after the beginning of the universe to the present day.
 
-To achieve this goal required a telescope of unparalleled sensitivity, with a collecting area approaching a square kilometre, and a frequency range from less than 100 MHz to a few GHz. Of course, once these basic parameters were described, scientists realised this basic instrument would be capable of observing a huge number of phenomena. Whilst this significantly enhanced the science case and scientific interest in the project, it also complicated the design, and necessitated the construction of two telescopes - one optimised for mid frequencies between 0.35 and 15 GHz and the other between 50 and 350 MHz.
-
-The project has always been seen as international in scope, and in 2013 it was decided to establish an Inter-governmental Organisation to manage construction and operate the telescopes.
-
-% \begin{itemize}[nosep,leftmargin=30pt]
-% %% [itemsep=0pt]
-%     \item[1988] Independent suggestions for a Large Radio Telescope
-%     \item[1990] 10th anniversary of VLA – the visions merge
-%     \item[1993] URSI GA Kyoto resolution to establish the Large Telescope Working Group 
-%     \item[1994] IAU forms its Future Large Scale Facilities Working Group 
-%     \item[1996] OECD Global Science Forum included radio astronomy activities
-%     \item[1997] MoA for technology collaboration
-%     \item[1998] “SKA” name adopted
-%     \item[2000] International MoU signed
-%     \item[2003] SKA International Project Office established in the Netherlands
-%     \item[2004] Rawlings and Carilli published the new science case
-%     \item[2006] Site down-selected to Australia and South Africa
-%     \item[2008] SKA Project Development Office (SPDO) formed
-%     \item[2009] Agencies SKA Group formed
-%     \item[2011] SKA Organisation becomes a legal entity - a UK limited company.
-%     \item[2012] Selection of the SKA host sites in Australia and South Africa
-%     \item[2013] SKA Design Consortia commence design of telescope components
-%     \item[2014] Rebaselining of the project into SKA1 and SKA2.
-%     \item[2015] Jodrell Bank selected as the permanent home of the SKA Observatory
-% \end{itemize}
-% 1993 when a, international group of  astronomers began collaborating on developing world’s next-generation low-frequency telescope. The collaboration – known as SKA Telescope – was an informal affiliation. During these early years, there was neither a formal treaty to govern the relationship nor formal contracts. Rather, it was a group of pioneering, like-minded individuals and organizations all collaborating to unlock the art of the possible to show proof of concept for a large-scale radio telescope.
-
+To achieve this goal required a telescope of unparalleled sensitivity, with a collecting area approaching a square kilometre, and a frequency range from less than 100 MHz to a few GHz. Of course, once these basic parameters were described, scientists realised this instrument would be capable of observing a huge number of other phenomena. This significantly enhanced the science case and scientific interest in the project, but it also complicated the design, and necessitated the construction of two telescopes - one optimised for mid frequencies between 0.35 and 15 GHz (being built in South Africa) and the other between 50 and 350 MHz (being built in Australia).
 
 \subsection{Pre-Construction}
-Prior to the formal start of construction the SKA had an extended pre-construction phase, culminated in a period of detailed design by pre-construction consortia from ~2014 to ~2018, followed by a bridging phase aftger the designs had passed CDR but the construction had no formally started. In software, this was far from ideal, because the design consortia did limited prototyping, and consequently limited practical design validation, so the value was limited because it was largely limited to a paper exercise. This changed in the bridging phase, where we pivoted to focussing on development of processes with the adoption of the Scaled Agile Framework, and code creation.
+The project has always been seen as international in scope, and in 2013 it was agreed to establish an Inter-governmental Organisation to manage construction and operate the telescopes. This also was about the same time where detailed design began, and so from 2013 to the start of construction in 2021 development followed two paths - one technical to deliver the design and the other governance, to deliver the organisational and funding structure.
+
+Up until 2019 the technical development was known as "pre-construction" and international consortia developed detailed designs on different aspects of the telescopes. These culminated in a series of Critical Design Reviews coordination by the SKA Organisation. Between the completion of these CDR's and the formal start of construction was a "bridging" phase. In software, the design phase was far from ideal because it was largely a paper exercise, and the design consortia did limited prototyping, and consequently limited practical design validation. This changed in the bridging phase, where we pivoted to the development of processes with the adoption of the Scaled Agile Framework, and code creation, but we are still evolving the design as we learn about the system.
 
 \subsection{Construction}
-At the time of the last paper construction had only just commenced. The plan is to build the two telescopes simultaneously, and each is to be delivered in stages, as successfuly larger and more powerful interferometers. Each stage is known as an ''Array Assembly (AA)'', and the basic parameters of each array assembly is shown in table~\ref{tab:array-assemblies}. An outline of the major delivery milestones for both telescopes is shown in Figure~\ref{fig:ska-timeline}
+At the time of the last paper construction had only just commenced. The plan is to build the two telescopes simultaneously, and each is to be delivered in stages, as successively larger and more powerful interferometers. Each stage is known as an ''Array Assembly (AA)'', and the basic parameters of each array assembly is shown in table~\ref{tab:array-assemblies}. An outline of the major delivery milestones for both telescopes is shown in Figure~\ref{fig:ska-timeline}. The original implementation plan had 4 Array releases (AA1 to AA4), but since then we have introduced a Minimum Viable System, which is smaller than AA1 (hence AA0.5) and funding is currently limiting the final size (hence the replacement of AA3 and AA4 by a money limited AA*). Irrespective of this, the goal of the observatory is to implement the full AA4 sized system as soon as funds allow it.
 
 \begin{table*}[!h]
 	\centering
 	\caption{Basic parameters for SKA major milestones. The Operations Readiness Review }
         \begin{tabular}{llcc}
             \toprule
-            Milestone Event (earliest) & Array Size & SKA-Mid (end date) & SKA-Mid (end date)\\
+            Milestone Event (earliest) & Array Size & SKA-Mid (end date) & SKA-Low (end date)\\
             \midrule
-            AA0.5 & 4 dishes 6 stations   & 2025 Jan & 2024 Nov\\
-            AA1   & 8 dishes 18 stations  & 2026 Jan & 2025 Nov\\
-            AA2   & 64 dishes 64 stations & 2027 Jan & 2026 Oct\\
-            AA3 & 121 dishes 256 stations &  & \\
+            AA0.5 & 4 dishes 6 stations   & 2025 May & 2024 Nov\\
+            AA1   & 8 dishes 18 stations  & 2026 Apr & 2025 Nov\\
+            AA2   & 64 dishes 64 stations & 2027 Mar & 2026 Oct\\
+            %%AA3 & 121 dishes 256 stations &  & \\
             AA* & 144 dishes 307 stations & 2027 Oct & 2028 Jan\\
-            \multicolumn{2}{l}{Operations Readiness Review} & 2028 Jan & 2028 Apr\\
+            \multicolumn{2}{l}{Operations Readiness Review} & 2028 Apr & 2028 Apr\\
             \multicolumn{2}{l}{End of Staged Delivery programme} & 2028 Jul & 2028 Jul\\
             AA4 & 197 dishes 512 stations & TBD & TBD\\
             \bottomrule
@@ -144,25 +124,34 @@ At the time of the last paper construction had only just commenced. The plan is 
 	\label{fig:ska-timeline}
   \end{figure*}
 
-As of August 2023, 70 contracts and significant purchase orders have been awarded for a total commitment of approximately €575M. These contracts range across the major infrastructure works in each country as well as the technical subsystems and services required for complete facility systems, focusing on the long lead items needed for early deliveries but including full scale Staged Deliveries as well. Recently, for example, contracts were emndorsed for the main access, airstrip and site accommodation for the SKA-Low telescope in Australia, and delivery of 64 Dish Structure Systems for the SKA-Mid telescope in South Africa. was also signed, following on from last year’s signature of the In-Kind Contribution Agreement.
+As of August 2023, 70 contracts and significant purchase orders have been awarded for a total commitment of approximately €575M. These contracts range across the major infrastructure works in each country as well as the technical subsystems and services required for complete facility systems, focusing on the long lead items needed for early deliveries but including full scale Staged Deliveries as well. Recently, for example, contracts were endorsed for the main access, airstrip and site accommodation for the SKA-Low telescope in Australia, and delivery of 64 Dish Structure Systems for the SKA-Mid telescope in South Africa. was also signed, following on from last year’s signature of the In-Kind Contribution Agreement.
 
-Alos, at this time, the progress measures indicate 15.2\% of the project work has been completed, against 17.0\% planned and 15.8\% spent (see Table 13 – EVM Status, Section 7.3 for key metrics).  The key performance indicators signal that the project is behind schedule and over budget for the achieved work to date; the transition this month from behind under budget to over budget is the result of advanced payments required for the execution of the SKA-Low Infrastructure work and will recover over the coming months as progress is made.
+Also, at this time, the progress measures indicate 15.2\% of the project work has been completed, against 17.0\% planned and 15.8\% spent (see Table 13 – EVM Status, Section 7.3 for key metrics).  The key performance indicators signal that the project is behind schedule and over budget for the achieved work to date; the transition this month from behind under budget to over budget is the result of advanced payments required for the execution of the SKA-Low Infrastructure work and will recover over the coming months as progress is made.
 
-Significant project contingency funds have been spent to manage the Observatory-level risks associated with the global economic situation driven by the pandemic and regional war as well as delays in deliverables external to the project but impacting its execution (e.g., noted schedule delays in land access, membership-driven changes in planning, host country deliverables). The management of the Observatory level issues, through a Management Reserve (termed ‘Enhanced Contingency’ by the SKAO Council), was recommended at the level of 10\% (€111M in 2022 EC) within the Construction Proposal, approximately half of which has been realised in the execution of the current contracts with the remainder of the procurement related issues tracking to the overall envelope. Without the availability of this Observatory funding, the additional scope is added to the project threatening the planning and performance with an outcome projected to be only at the 17\% level for probability of success. The funding of the Management Reserve (aka Enhanced Contingency) is under discussion with Council as a need that can be managed in the short-term but with significant impacts on the project execution if not obtained in 2025. If obtained, the Management Reserve allows a recovery of the project contingency which restores the probability of success to approximately 84\% as of the July 2023 data.
+Since the start of construction, significant project contingency funds have been spent to manage the Observatory-level risks associated with the global economic situation driven by the pandemic and regional war as well as delays in deliverables external to the project but impacting its execution (e.g., noted schedule delays in land access, membership-driven changes in planning, host country deliverables). The management of the Observatory level issues, through a Management Reserve (termed ‘Enhanced Contingency’ by the SKAO Council), was recommended at the level of 10\% (€111M in 2022 EC) within the Construction Proposal, approximately half of which has been realised in the execution of the current contracts with the remainder of the procurement related issues tracking to the overall envelope. Without the availability of this Observatory funding, the additional scope is added to the project threatening the planning and performance with an outcome projected to be only at the 17\% level for probability of success. The funding of the Management Reserve (aka Enhanced Contingency) is under discussion with Council as a need that can be managed in the short-term but with significant impacts on the project execution if not obtained in 2025. If obtained, the Management Reserve allows a recovery of the project contingency which restores the probability of success to approximately 84\% as of the July 2023 data.
 
 There are currently no significant changes to either performance or scope.
 
+With regards to practical progress on the ground, at the moment the main focus is building the construction camps at both sites and accepting the first deliveries of equipment - at the low site in particular (See figures~\ref{fig:low-camp} and~\ref{fig:low-construction}).
+
 \begin{figure*}[tb]
 	\centering
-  \includegraphics[width=0.45\textwidth]{Cables.jpg}
-  \includegraphics[width=0.45\textwidth]{ConstructionCamp.png}\\
+  \includegraphics[width=\textwidth]{ConstructionCamp.png}    
+	\caption{The SKA-Low construction camp site. Bottom centre is the ``fly camp'' or the camp built to enable other construction camp activities. The clear area to its left is the site of the final construction camp, and the clear area to the top right is the lay-down area}
+	\label{fig:low-camp}
+  \end{figure*}
+
+
+\begin{figure*}[tb]
+	\centering
+  \includegraphics[width=0.45\textwidth]{Packed Antennas.jpg}
+  \includegraphics[width=0.45\textwidth]{Cables.jpg}\\
   \includegraphics[width=0.45\textwidth]{AAVS3.jpg}
   \includegraphics[width=0.45\textwidth]{WireMesh.jpg}
     
-	\caption{
-		Graphical representation of the SKA project schedule as at 1 August 2023. Milestones dates do not include any allowance for schedule contingency, so the actual dates are anticipated to be delayed in a managed way.
+	\caption{Recent construction pictures from the SKA-Low site. From top-left: A container of antennas; Cable spools in the lay-down area; Wire mesh in the lay-down area; The partially completed AAVS3 station
 	}
-	\label{fig:ska-timeline}
+	\label{fig:low-construction}
   \end{figure*}
 
 \subsection{Software status}
@@ -174,22 +163,20 @@ The number 1 challenge of the SKA is scaling. This is a multidimensional challen
 \begin{itemize}
 	\item Compute scaling of the data processing.
 	\item Complexity scaling, particularly in the control system.
-	\item Process scaling - trying to maintain some level of agility and flexibiliy in a large development team.
-	\item Geographical and cultural scaling across timezones, cultures and nationalities.
+	\item Process scaling - trying to maintain some level of agility and flexibility in a large development team.
+	\item Geographical and cultural scaling across time-zones, cultures and nationalities.
 \end{itemize}
-Each of this brings their own challenges.
+Each of this brings their own challenges. The first is dealt with by extensive testing of the code in scaling situations. The second relies on architectural encapsulation, and the encapsulation managed to ensure that the interfaces are kept simple and testable. The third is a human problem, and inherently relies on having aligned but autonomous teams, so the coordination and communication in manageable. However, this relies on the architecture mapping to the teams in a reasonable way. Finally, the last is an inevitable result of the international nature of the SKAO - it can be mitigated by asynchronous communication and reducing the communication needed between teams widely separated in time-zones, cultural understanding but some working out of ours appears to be inevitable.
 
 \subsection{Tracking progress towards long term milestones}
 \subsection{Continuously working product}
-A cornerstone of any agile development is a continuous integration system that ensures that a continuously  working and tested set of products is always available. In a single large system, this is extremely difficult to guarantee, particularly without the focussing drive of stakeholders who are using the system everyday.
+A cornerstone of any agile development is a continuous integration system that ensures that a continuously  working and tested set of products is always available. In a single large system, this is extremely difficult to guarantee, particularly without the focusing drive of stakeholders who are using the system everyday.
 
 \subsection{Software vs System Engineering}
-The SKAO has a strong System Engineering culture. In his excellent paper Maier~\cite{Maier2006} highlights a fundamental conflict between traditional System Engineering and Software Engineering - System Engineering is based on an assumption that the decomposition of products has a heirarchical structure with each sub-product having an ``{\em is-part-of}'' relationship with a parent product. This simplifies the concept of the system Engineering V model of decompositional design and verification. Maier points out that software product relationships are usually {\em is-used-by}, not {\em is-part-of}, which can either generate a flat structure of (ideally independent) services or a layered structure of modules. Since these don't adhere to the system engineering heirarchy, important software products that are used by many parts of the system often aren't recognised in the Product Breakdown structure used for System verification.
+The SKAO has a strong System Engineering culture. In his excellent paper Maier~\cite{Maier2006} highlights a conflict between traditional System Engineering and Software Engineering - System Engineering is based on an assumption that the decomposition of products has a hierarchical structure with each sub-product having an ``{\em is-part-of}'' relationship with a parent product. This simplifies the concept of the system Engineering V model of decomposition design and verification. Maier points out that software product relationships are usually {\em is-used-by}, not {\em is-part-of}, which can either generate a flat structure of (ideally independent) services or a layered structure of modules. Since these don't adhere to the system engineering hierarchy, important software products that are used by many parts of the system often aren't recognised in the Product Breakdown structure used for System verification.
 
-\subsection{Sub-system ownership vs Global optimisation}
-\subsection{Coupling and Conways Law}
 \subsection{Architectural Evolution}
-In any large system, architectural evolution is difficult. Because of the extended, siloed, pre-construction phase where no system level code development was done, it meant that many of the design aspects were immature. The primary interface behaviours were untested, but conversely the description was very wide. This is contrary to the Agile ideal which would see a Minimum Viable Product built that was still representative of aspects of the full system. 
+In any large system, architectural evolution is difficult. Because of the extended, siloed, pre-construction phase where no system level code development was done, it meant that many of the design aspects were immature and suffered from the effects on Conway's Law~\cite{Conway}. The primary interface behaviours were untested, but conversely the description was very wide. This is contrary to the Agile ideal which would see a Minimum Viable Product built that was still representative of aspects of the full system. 
 
 \subsection{Interaction with other contracts}
 
@@ -217,13 +204,6 @@ In 2018 the SKA teams decide to adopt the Scaled Agile Framework as a basis for 
 
 \section{CONCLUSION}
 
-Any conclusions should be in a separate section directly preceding
-the \textbf{ACKNOWLEDGEMENTS}, \textbf{APPENDIX}, or \textbf{REFERENCES} sections, in that
-order.
-
-\section{ACKNOWLEDGEMENTS}
-Any acknowledgement should be in a separate section directly preceding
-the \textbf{REFERENCES} or \textbf{APPENDIX} section.
 
 
 \section{APPENDIX}
