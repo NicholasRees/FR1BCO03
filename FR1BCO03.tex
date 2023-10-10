@@ -48,6 +48,7 @@
  {\usepackage[utf8]{inputenc}}           % switch to utf8
 
 \usepackage[USenglish]{babel}
+\usepackage{svg}
 
 %%\usepackage{draftwatermark}
 %%\SetWatermarkText{Draft}
@@ -85,15 +86,19 @@ This is the third in a series of SKA status papers presented at ICALEPCS meeting
 \section{HISTORY}
 While the SKAO was officially created as an international observatory on 15 January 2021, the concept dates back to the early 1990's when astronomers proposed the idea of tracing the history of the Universe by mapping its most abundant element: Hydrogen (see, for example, Wilkinson~\cite{1991ASPC...19..428W}). Specifically, they proposed to observe the H1 emission line from it's rest frequency of 1420 MHz to red-shifts of more than 10, thereby observing it from just after the beginning of the universe to the present day.
 
-To achieve this goal required a telescope of unparalleled sensitivity, with a collecting area approaching a square kilometre, and a frequency range from less than 100 MHz to a few GHz. Of course, once these basic parameters were described, scientists realised this instrument would be capable of observing a huge number of other phenomena. This significantly enhanced the science case and scientific interest in the project, but it also complicated the design, and necessitated the construction of two telescopes - one optimised for mid frequencies between 0.35 and 15 GHz (being built in South Africa) and the other between 50 and 350 MHz (being built in Australia).
+To achieve this goal required a telescope of unparalleled sensitivity, with a collecting area approaching a square kilometre, and a frequency range from less than 100 MHz to a few GHz. Of course, once these basic parameters were described, scientists realised this instrument would be capable of observing a huge number of other phenomena. This significantly enhanced the science case and scientific interest in the project, but it also complicated the design, and necessitated the construction of two telescopes - one optimised for mid frequencies between 0.35 and 15 GHz (being built in South Africa) and the other between 50 and 350 MHz (being built in Australia). 
 
-\subsection{Pre-Construction}
+The main technical difference between the two telescopes is that at the higher frequencies, it is still economic to provide the collecting area with traditional dishes - in the baseline design (known as Array Assembly 4) there are 133 15 metre diameter dishes that will be integrated with the existing 64 1.3.5 metre MeerKAT dishes on the same site to create an array of 197 dishes.
+
+For the SKA-Low telescope, it is uneconomic to build dishes large enough that will be efficient at collecting at the longer wavelengths (50 MHz is about 6 meters), so the SKA-Low design has 512 "stations" each of which is a collection of 256 phased wire log-periodic antennas. Each station is about 40 metres in diameter, and is roughly equivalent to a dish antenna of the same diameter, but is much cheaper to build.
+
 The project has always been seen as international in scope, and in 2013 it was agreed to establish an Inter-governmental Organisation to manage construction and operate the telescopes. This also was about the same time where detailed design began, and so from 2013 to the start of construction in 2021 development followed two paths - one technical to deliver the design and the other governance, to deliver the organisational and funding structure.
 
+\subsection{Pre-Construction}
 Up until 2019 the technical development was known as "pre-construction" and international consortia developed detailed designs on different aspects of the telescopes. These culminated in a series of Critical Design Reviews coordination by the SKA Organisation. Between the completion of these CDR's and the formal start of construction was a "bridging" phase. In software, the design phase was far from ideal because it was largely a paper exercise, and the design consortia did limited prototyping, and consequently limited practical design validation. This changed in the bridging phase, where we pivoted to the development of processes with the adoption of the Scaled Agile Framework, and code creation, but we are still evolving the design as we learn about the system.
 
 \subsection{Construction}
-At the time of the last paper construction had only just commenced. The plan is to build the two telescopes simultaneously, and each is to be delivered in stages, as successively larger and more powerful interferometers. Each stage is known as an ''Array Assembly (AA)'', and the basic parameters of each array assembly is shown in table~\ref{tab:array-assemblies}. An outline of the major delivery milestones for both telescopes is shown in Figure~\ref{fig:ska-timeline}. The original implementation plan had 4 Array releases (AA1 to AA4), but since then we have introduced a Minimum Viable System, which is smaller than AA1 (hence AA0.5) and funding is currently limiting the final size (hence the replacement of AA3 and AA4 by a money limited AA*). Irrespective of this, the goal of the observatory is to implement the full AA4 sized system as soon as funds allow it.
+At the time of the last paper construction had only just commenced. The plan is to build the two telescopes simultaneously, and each is to be delivered in stages, as successively larger and more powerful interferometers. Each stage is known as an ''Array Assembly (AA)'', and the basic parameters of each array assembly is shown in table~\ref{tab:array-assemblies}. An outline of the major delivery milestones for both telescopes is shown in Figure~\ref{fig:ska-timeline}. The original implementation plan had 4 Array releases (AA1 to AA4), but since then we have introduced a Minimum Viable System, which is smaller than AA1 (hence AA0.5) and funding is currently limiting the final size (hence the replacement of AA3 and AA4 by a funding limited AA*). Irrespective of this, the goal of the observatory is to implement the full AA4 sized system as soon as funds allow it.
 
 \begin{table*}[!h]
 	\centering
@@ -124,12 +129,12 @@ At the time of the last paper construction had only just commenced. The plan is 
 	\label{fig:ska-timeline}
   \end{figure*}
 
-\section{Current Status}
-As of August 2023, 70 contracts and significant purchase orders have been awarded for a total commitment of approximately €575M. These contracts range across the major infrastructure works in each country as well as the technical subsystems and services required for complete facility systems, focusing on the long lead items needed for early deliveries but including full scale Staged Deliveries as well. Recently, for example, contracts were endorsed for the main access, airstrip and site accommodation for the SKA-Low telescope in Australia, and delivery of 64 Dish Structure Systems for the SKA-Mid telescope in South Africa. was also signed, following on from last year’s signature of the In-Kind Contribution Agreement.
 
-Also, at this time, the progress measures indicate 15.2\% of the project work has been completed, against 17.0\% planned and 15.8\% spent.  The key performance indicators signal that the project is behind schedule and over budget for the achieved work to date; the transition this month from behind under budget to over budget is the result of advanced payments required for the execution of the SKA-Low Infrastructure work and will recover over the coming months as progress is made.
+As of August 2023, 70 contracts and significant purchase orders had been awarded for a total commitment of approximately €575M. These contracts ranged across the major infrastructure works in each country as well as the technical subsystems (such as software) and services required. Recently, for example, contracts were endorsed for the main access, airstrip and site accommodation for the SKA-Low telescope in Australia, and delivery of 64 Dish Structure Systems for the SKA-Mid telescope in South Africa. was also signed. Software has been contracted as time and materials professional service contracts.
 
-Since the start of construction, significant project contingency funds have been spent to manage the Observatory-level risks associated with the global economic situation driven by the pandemic and regional war as well as delays in deliverables external to the project but impacting its execution (e.g., noted schedule delays in land access, membership-driven changes in planning, host country deliverables). The management of the Observatory level issues, through a Management Reserve (termed ‘Enhanced Contingency’ by the SKAO Council), was recommended at the level of 10\% (€111M in 2022 EC) within the Construction Proposal, approximately half of which has been realised in the execution of the current contracts with the remainder of the procurement related issues tracking to the overall envelope. Without the availability of this Observatory funding, the additional scope is added to the project threatening the planning and performance with an outcome projected to be only at the 17\% level for probability of success. The funding of the Management Reserve (aka Enhanced Contingency) is under discussion with Council as a need that can be managed in the short-term but with significant impacts on the project execution if not obtained in 2025. If obtained, the Management Reserve allows a recovery of the project contingency which restores the probability of success to approximately 84\% as of the July 2023 data.
+The progress measures indicate 15.2\% of the project work has been completed, against 17.0\% planned and 15.8\% spent.  The key performance indicators show that the project is behind schedule and over budget for the achieved work to date; the over budget is the result of advanced payments required for the execution of the SKA-Low Infrastructure work and will be recovered as progress is made.
+
+Since the start of construction, significant project contingency funds have been spent to manage the Observatory-level risks associated with the global economic situation driven by the pandemic and regional war as well as delays in deliverables external to the project but impacting its execution (e.g. schedule delays in land access, membership-driven changes in planning, host country deliverables). The management of the Observatory level issues, through a Management Reserve, was recommended at the level of 10\% (€111M in 2022 EC) within the Construction Proposal, approximately half of which has been realised in the execution of the current contracts with the remainder of the procurement related issues tracking to the overall envelope. Without the availability of this Observatory funding, the additional scope would be added to the project with an outcome projected to be only at the 17\% level for probability of success. The Management Reserve allows a recovery of the project contingency which restores the probability of success to approximately 84\% as of the July 2023 data.
 
 There are currently no significant changes to either performance or scope.
 
@@ -140,7 +145,7 @@ With regards to practical progress on the ground, at the moment the main focus i
   \includegraphics[width=\textwidth]{ConstructionCamp.png}    
 	\caption{The SKA-Low construction camp site. Bottom centre is the ``fly camp'' or the camp built to enable other construction camp activities. The clear area to its left is the site of the final construction camp, and the clear area to the top right is the lay-down area}
 	\label{fig:low-camp}
-  \end{figure*}
+\end{figure*}
 
 
 \begin{figure*}[tb]
@@ -156,7 +161,31 @@ With regards to practical progress on the ground, at the moment the main focus i
   \end{figure*}
 
 \subsection{Software status}
-A project of the SKA scale posed a unique set of political challenges and we were required to spread software development over 8 countries (Australia, China, India, Italy, South Africa, Switzerland, The Netherlands and the United Kingdom) with strict monetary allocations and around 150 contracted developers. Also, in order to allow for ongoing change and optimisation, we had adopted the Scaled Agile Framework\footnote{\url{https://www.scaledagileframework.com}} as the basis for our development processes. In order to avoid contractual silo's impacting the development process we decided to adopt hightly relational contract structure based on the Vested\footnote{\url{https://www.vestedway.com}} approach. This foregoes the tradititional tightly defined contract specification in the belief that this is counterproductive if the work has a large number of unknowns, and instead replaces it with a vision, strategic objectives, guiding principles and expected behaviours, which force the development teams to work closely together with a goal of system level optimisation.
+A project of the SKA scale poses a unique set of political challenges and we were required to spread software development over 8 countries (Australia, China, India, Italy, South Africa, Switzerland, The Netherlands and the United Kingdom) with strict monetary allocations and around 150 contracted developers. Also, in order to allow for ongoing change and optimisation, we had adopted the Scaled Agile Framework\footnote{\url{https://www.scaledagileframework.com}} as the basis for our development processes. In order to avoid contractual silo's impacting the development process we decided to adopt hightly relational contract structure based on the Vested\footnote{\url{https://www.vestedway.com}} approach. This foregoes the tradititional tightly defined contract specification in the belief that this is counterproductive if the work has a large number of unknowns, and instead replaces it with a general Statement of Intent descibing how contractors must behave, and a commitment to the deliver on the goals of the programme. This, along with short term legal commitments but with long term assurances of continued work if standards are met, plus the range of companies involved reduces the overall risk and ensures the development teams work closely together with a goal of system level optimisation.
+
+At the time of writing the main focus of software development is:
+\begin{itemize}
+  \item Working with the assembly, integration and Verification (AIV) teams to deliver suitable monitoring and control systems for AA0.5 needs. AA0.5 is a very limited interferometer (4 SKA-Mid Dishes and 6 SKA-Low stations), with no scaling issues. We have working examples of most code components, but still struggle with system level integration. 
+  \item Supporting the rollout of a new test station for SKA-Low (known as AAVS3).
+  \item Supporting the installation and testing of the first dishes for SKA-Mid.
+  \item Developing the scaled processing needed for later Array Releases (AA2 and AA*)
+  \item Developing the basic observing modes needed - such as interferometric pointing calibration for the SKA-Mid dishes.
+  \item Integrating the signal chains from digitisation through to science data processing.
+  \item Improving the teams ability to deliver software efficiently.
+\end{itemize}
+
+Software is integrated and tested in a number of places. We make a heavy use of the Continuous Integrated (CI) capabilities of the GitLab platform, and so we can run a CI pipeline wherever we can execute a GitLab runner. Most pure software integration happens in cloud systems, with the bulk of it currently running on private Science Cloud systems generously provided by the UK, but we also have the ability to use commercial systems, if needed. Hardware integration happens either close to the hardware system developers and integrators (i.e. Canada, Australia and The Netherlands), or at the specialised SKA integration and test facilities in the host countries (specifically Cape Town in South Africa and Geraldton in Western Australia).
+
+% \begin{figure*}
+%   \centering
+%   \includegraphics[width=\textwidth]{Roadmap.pdf}
+% \caption{
+%   Short term roadmap of SKA Software Development
+% }
+% \label{fig:sw-roadmap}
+% \end{figure*}
+
+
 
 \section{Challenges}
 \subsection{Scaling}
@@ -176,7 +205,7 @@ A cornerstone of any agile development is a continuous integration system that e
 The SKAO has a strong System Engineering culture. In his excellent paper Maier~\cite{Maier2006} highlights a conflict between traditional System Engineering and Software Engineering - System Engineering is based on an assumption that the decomposition of products has a hierarchical structure with each sub-product having an ``{\em is-part-of}'' relationship with a parent product. This simplifies the concept of the system Engineering V model of decomposition design and verification. Maier points out that software product relationships are usually {\em is-used-by}, not {\em is-part-of}, which can either generate a flat structure of (ideally independent) services or a layered structure of modules. Since these don't adhere to the system engineering hierarchy, important software products that are used by many parts of the system often aren't recognised in the Product Breakdown structure used for System verification.
 
 \subsection{Architectural Evolution}
-In any large system, architectural evolution is difficult. Because of the extended, siloed, pre-construction phase where no system level code development was done, it meant that many of the design aspects were immature and suffered from the effects on Conway's Law~\cite{Conway}. The primary interface behaviours were untested, but conversely the description was very wide. This is contrary to the Agile ideal which would see a Minimum Viable Product built that was still representative of aspects of the full system. 
+In any large system, architectural evolution is difficult. Because of the extended, siloed, pre-construction phase where no system level code development was done, many of the design aspects were immature and suffered from the effects on Conway's Law~\cite{Conway}. The primary interface behaviours were untested, and few, if any, "unhappy path" behaviours were unspecified. However, other aspects of the design within sub-systems were quite detailed. This is contrary to the Agile ideal which would see a Minimum Viable Product built that had little functionality within the sub-systems, but was still representative of aspects of the whole system. 
 
 %\subsection{Interaction with other contracts}
 
@@ -194,7 +223,7 @@ In any large system, architectural evolution is difficult. Because of the extend
 %% MO2BCO05 - Enabling Transformational Science through Global Collaboration and Innovation using the Scaled Agile Framework
 %% MO4BCO01 - Using BDD Testing in SKAO: Challenges and Opportunities - see Giorgio and Verity paper
 
-%\section{CURRENT STATUS}
+%%\section{CURRENT STATUS}
 
 %% TUMBCMO09 - Front-End Monitor and Control Web Application for large telescope infrastructures: a comparative analysis
 %% THMBCMO14 - Development of the SKA control system, progress and challenges 
@@ -207,7 +236,7 @@ Development of the SKA Software is one of the most complex software undertakings
 
 
 \section{APPENDIX}
-The SKA Software Collaboration for this paper comprises:
+The SKA Software Collaboration for at the time of this paper comprises:
 
 T. Dijkema,
 S. Van Der Tol,
