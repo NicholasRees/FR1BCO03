@@ -81,7 +81,7 @@ The SKA Project is a science mega-project whose mission is to build the world's 
 \end{abstract}
 
 \section{INTRODUCTION}
-This is the third in a series of SKA status papers presented at ICALEPCS meetings and should be read in conjunction with the other two to understand the evolution of the SKA. At the time of the 2021 paper formal construction had just commenced, and we were in the process of issuing the first contracts. This paper covers the evolution since this time, but it starts with a brief historical overview to establish context.
+This is the third in a series of SKA status papers presented at ICALEPCS meetings and together they provide a picture of the evolution of the SKA Software. At the time of the 2021 paper formal construction had just commenced, and we were in the process of issuing the first contracts. This paper covers the evolution since this time, but it starts with a brief historical overview to establish context.
 
 \section{HISTORY}
 While the SKAO was officially created as an international observatory on 15 January 2021, the concept dates back to the early 1990's when astronomers proposed the idea of tracing the history of the Universe by mapping its most abundant element: Hydrogen (see, for example, Wilkinson~\cite{1991ASPC...19..428W}). Specifically, they proposed to observe the H1 emission line from it's rest frequency of 1420 MHz to red-shifts of more than 10, thereby observing it from just after the beginning of the universe to the present day.
@@ -128,6 +128,7 @@ At the time of the last paper construction had only just commenced. The plan is 
 	}
 	\label{fig:ska-timeline}
   \end{figure*}
+
 
 As of August 2023, 70 contracts and significant purchase orders had been awarded for a total commitment of approximately €575M. These contracts ranged across the major infrastructure works in each country as well as the technical subsystems (such as software) and services required. Recently, for example, contracts were endorsed for the main access, airstrip and site accommodation for the SKA-Low telescope in Australia, and delivery of 64 Dish Structure Systems for the SKA-Mid telescope in South Africa. was also signed. Software has been contracted as time and materials professional service contracts.
 
@@ -188,16 +189,15 @@ Software is integrated and tested in a number of places. We make a heavy use of 
 
 \section{Challenges}
 \subsection{Scaling}
-The number 1 challenge of the SKA is scaling. This is a multidimensional challenge, encompassing:
+The biggest challenge for the SKA Software Collaboration is scaling. This is a multidimensional challenge, encompassing:
 \begin{itemize}
 	\item Compute scaling of the data processing.
 	\item Complexity scaling, particularly in the control system.
-	\item Process scaling - trying to maintain some level of agility and flexibility in a large development team.
+	\item Process scaling - trying to maintain agility and flexibility in a large development team.
 	\item Geographical and cultural scaling across time-zones, cultures and nationalities.
 \end{itemize}
-Each of this brings their own challenges. The first is dealt with by extensive testing of the code in scaling situations. The second relies on architectural encapsulation, and the encapsulation managed to ensure that the interfaces are kept simple and testable. The third is a human problem, and inherently relies on having aligned but autonomous teams, so the coordination and communication in manageable. However, this relies on the architecture mapping to the teams in a reasonable way. Finally, the last is an inevitable result of the international nature of the SKAO - it can be mitigated by asynchronous communication and reducing the communication needed between teams widely separated in time-zones, cultural understanding but some working out of ours appears to be inevitable.
+Each of this brings their own challenges. The first is dealt with by extensive testing of the code in scaling situations. The second relies on architectural encapsulation, and the ensuring that interfaces are kept simple and testable. The third is a human problem, and inherently relies on having aligned but autonomous teams, so the coordination and communication in manageable. However, this relies on the architecture mapping to the teams in a reasonable way. Finally, the last is an inevitable result of the international nature of the SKAO - it can be mitigated by asynchronous communication and reducing the communication needed between teams widely separated in time-zones, cultural understanding but some working out of hours is inevitable.
 
-\subsection{Tracking progress towards long term milestones}
 \subsection{Continuously working product}
 A cornerstone of any agile development is a continuous integration system that ensures that a continuously  working and tested set of products is always available. In a single large system, this is extremely difficult to guarantee, particularly without the focusing drive of stakeholders who are using the system everyday.
 
@@ -207,16 +207,16 @@ The SKAO has a strong System Engineering culture. In his excellent paper Maier~\
 \subsection{Architectural Evolution}
 In any large system, architectural evolution is difficult. Because of the extended, siloed, pre-construction phase where no system level code development was done, many of the design aspects were immature and suffered from the effects on Conway's Law~\cite{Conway}. The primary interface behaviours were untested, and few, if any, "unhappy path" behaviours were unspecified. However, other aspects of the design within sub-systems were quite detailed. This is contrary to the Agile ideal which would see a Minimum Viable Product built that had little functionality within the sub-systems, but was still representative of aspects of the whole system. 
 
-\subsection{Interaction with other contracts}
+%\subsection{Interaction with other contracts}
 
-%%%%\section{SOFTWARE ARCHITECTURE}
+%\section{SOFTWARE ARCHITECTURE}
 
 %% TH1BCO03 - The Tango Controls Collaboration Status in 2023
 %% TH1BCO04 - Asynchronous Execution of Tango Commands in the SKA Telescope Control System
 %% TH2AO06 - SKA Tango Operator
 
-\section{PROCESSES}
-In 2018 the SKA teams decide to adopt the Scaled Agile Framework as a basis for our development processes. This resulted 
+%\section{PROCESSES}
+%In 2018 the SKA teams decide to adopt the Scaled Agile Framework as a basis for our development processes. This resulted 
 
 %% MO2BCO01 - Driving Behavioural Change of Software Developers in a Global Organisation Assisted by a Paranoid Android
 %% MO2BCO03 - Strategy and tools to test software in the SKA project: the CSP-LMC case
@@ -232,7 +232,7 @@ In 2018 the SKA teams decide to adopt the Scaled Agile Framework as a basis for 
 %% FR2BCO03 - Taranta project - Update and current status%% MO2BCO03 - Strategy and tools to test software in the SKA project: the CSP-LMC case
 
 \section{CONCLUSION}
-
+Development of the SKA Software is one of the most complex software undertakings of any scientific project. At the time of writing, it is at an exciting stage where we are  starting to roll out software for use in the initial testing, commissioning and verification phase of the project. This presents many challenges, but we have organised the project to address these challenges as they arise and adapt to the changing needs of the project. 
 
 
 \section{APPENDIX}
